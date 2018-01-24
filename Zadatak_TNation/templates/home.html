@@ -1,0 +1,50 @@
+
+<div class="row" > 
+    <div class="col-lg-9 col-md-9 col-sm-9">
+        <p id="area">Oblast: {{ area }}
+            <span id="time">
+                VREME: {{counter | secondsToDateTime | date:"mm 'm': ss 's'"}}
+            </span>
+        </p>
+        <form name="myForm">
+            
+            <input 
+               required
+               style="margin-top: 75px;"
+               type="text" 
+               class="form-control"
+               placeholder="Search"
+               ng-model="searchQuery"
+               uib-typeahead="grad for grad in gradovi | filter:$viewValue | limitTo: 8" 
+               typeahead-on-select="selectItem($item, $model, $label)"
+             />
+            
+            
+            <button 
+              id="add_button"
+              ng-disabled="myForm.$invalid"
+              class="btn btn-primary" 
+              type="button" 
+              ng-click="addItem()">
+                  Dodaj u listu
+            </button>
+    
+        </form>
+        
+        
+    </div>
+    <div id='cities_list' class="col-lg-3 col-md-3 col-sm-3">
+        <div class="cities" ng-repeat="i in selectedCities track by $index">  
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">{{ i }}</div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <button class="delete_button" ng-click="delete(i)">&#10008;</button>
+            </div>
+        </div>
+    </div>
+    <button ng-click="addToCart(selectedCities, correct)" ui-sref="endgame()" style="float: right;" class="btn btn-success">Zavrsi igru</button>
+    
+        
+</div>     
+
+
+

@@ -1,0 +1,10 @@
+.progress-bar { 
+    transition: width 1s ease-in-out; 
+    
+  }
+
+#progressBarColumn {
+    margin-top: 50px;
+}
+
+  

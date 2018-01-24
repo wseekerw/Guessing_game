@@ -1,0 +1,58 @@
+#title {
+    text-align: center;
+}
+
+.form-control {
+    margin-top: 5px;
+}
+
+.btn {
+    margin-top: 5px;
+}
+
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    margin-bottom: 15px !important;
+}
+
+#add_button {
+    float: right;
+}
+
+#cities_list {
+    margin-top: 35px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: grey;
+    overflow: hidden;
+}
+
+.cities {
+    margin-top: 5px;
+
+}
+
+.delete_button {
+    border: none;
+    background-color: white;
+}
+
+.delete_span {
+    float: right;
+    display: block;
+}
+
+#area {
+    margin-bottom:-60px;
+    font-size: 17px;
+}
+
+#time {
+    float: right;
+}
+
